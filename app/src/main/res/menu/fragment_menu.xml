@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/hariIni"
+        android:icon="@drawable/baseline_menu_book_24"
+        android:title="@string/hari_ini" />
+
+    <item
+        android:id="@+id/semuaRenungan"
+        android:icon="@drawable/baseline_manage_search_24"
+        android:title="@string/semua_renungan"/>
+
+</menu>

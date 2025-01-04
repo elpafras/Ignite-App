@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".DashboardActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp">
+
+        <ImageView
+            android:id="@+id/halo"
+            android:layout_width="500dp"
+            android:layout_height="400dp"
+            android:contentDescription="@string/gambar"
+            android:src="@drawable/splashscreen"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/buttonRenungan"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/renungan"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="@color/maroon"
+            android:layout_below="@id/halo"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/buttonNytb"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/darkblue"
+            android:text="@string/nytb"
+            android:textColor="@color/white"
+            android:layout_below="@id/buttonRenungan"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/buttonKeluar"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="50dp"
+            android:text="@string/keluar"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/black"
+            android:layout_below="@id/buttonNytb"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/option"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/option"
+            android:src="@drawable/baseline_more_vert_24"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true" />
+
+    </RelativeLayout>
+
+</ScrollView>

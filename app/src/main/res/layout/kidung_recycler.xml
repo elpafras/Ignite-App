@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="5dp"
+    android:backgroundTint="@color/darkblue"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginVertical="10dp">
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="18dp"
+            android:id="@+id/list_item_title"
+            android:text="@string/title"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="18dp"
+            android:id="@+id/list_item_nada"
+            android:text="@string/nada"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_below="@id/list_item_title"/>
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="18dp"
+            android:id="@+id/list_item_bait"
+            android:text="@string/bait"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_below="@id/list_item_nada"/>
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="18dp"
+            android:id="@+id/list_item_koor"
+            android:text="@string/koor"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_below="@id/list_item_bait"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/list_item_number"
+            android:text="@string/satu"
+            android:textSize="50sp"
+            android:textColor="@color/white"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
