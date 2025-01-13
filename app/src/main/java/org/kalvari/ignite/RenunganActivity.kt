@@ -18,6 +18,7 @@ import org.kalvari.ignite.utility.NetworkUtils.showOfflineDialog
 class RenunganActivity : AppCompatActivity() {
 
     private lateinit var backButton: ImageView
+    private lateinit var shareButton: ImageView
     private lateinit var bottomNavigationView: BottomNavigationView
     private lateinit var titleTextView: TextView
 
@@ -33,10 +34,19 @@ class RenunganActivity : AppCompatActivity() {
     }
 
     private fun initializeViews() {
-        titleTextView = findViewById(R.id.title)
-        backButton = findViewById(R.id.back)
+        titleTextView   = findViewById(R.id.title)
+        backButton      = findViewById(R.id.back)
+        shareButton     = findViewById(R.id.share)
+
         backButton.setOnClickListener {
             navigateToDashboard()
+        }
+
+        shareButton.setOnClickListener {
+            val currentFragment = supportFragmentManager.findFragmentById(R.id.frameLayout)
+            if (currentFragment is HariIniFragment) {
+                currentFragment.shareContent()
+            }
         }
     }
 
@@ -52,8 +62,12 @@ class RenunganActivity : AppCompatActivity() {
 
     private fun handleNavigationItemSelected(item: MenuItem): Boolean {
         val fragment = when (item.itemId) {
-            R.id.hariIni -> HariIniFragment().also { titleTextView.setText(R.string.renungan_hari_ini) }
-            R.id.semuaRenungan -> SemuaRenunganFragment().also { titleTextView.setText(R.string.semua_renungan) }
+            R.id.hariIni -> HariIniFragment().also {
+                titleTextView.setText(R.string.renungan_hari_ini)
+            }
+            R.id.semuaRenungan -> SemuaRenunganFragment().also {
+                titleTextView.setText(R.string.semua_renungan)
+            }
             else -> null
         }
         return loadFragment(fragment)

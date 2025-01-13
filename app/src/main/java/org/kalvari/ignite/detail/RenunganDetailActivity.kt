@@ -5,10 +5,10 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import org.kalvari.ignite.R
 import org.kalvari.ignite.RenunganActivity
@@ -111,13 +111,13 @@ class RenunganDetailActivity : AppCompatActivity() {
         val dialog = builder.create()
 
         // Animation logic
-        val handler = Handler()
+        val handler = Handler(Looper.getMainLooper())
         val dots = arrayOf("", ".", "..", "...")
         var index = 0
 
         val runnable = object : Runnable {
             override fun run() {
-                loadingTextView.text = "Memuat Ayat" + dots[index]
+                loadingTextView.text = String.format("Memuat Ayat %s", dots[index])
                 index = (index + 1) % dots.size
                 handler.postDelayed(this, 500) // Update every 500ms
             }

@@ -25,7 +25,6 @@ import org.kalvari.ignite.R
 import org.kalvari.ignite.adapter.RenunganAdapter
 import org.kalvari.ignite.detail.RenunganDetailActivity
 import org.kalvari.ignite.model.RenunganModel
-import java.util.Locale
 
 class SemuaRenunganFragment : Fragment() {
     private lateinit var renunganModels: ArrayList<RenunganModel>
